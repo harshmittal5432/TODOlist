@@ -13,7 +13,7 @@ function Todo({ addtodo }) {
 
   return (
     <div className="todo-input">
-      <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Add a new todo" />
+      <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Add new todo task" />
       <button onClick={handleClick} className="btn btn-info mx-2">+</button>
     </div>
   );

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './Showtodo.css';
+import {formatDate} from './formatDate.js'
 
 function Showtodo({ list, removeTodo, editTodo,toggleComplete }) {
   const [isEditing, setIsEditing] = useState(null);
@@ -53,7 +54,7 @@ function Showtodo({ list, removeTodo, editTodo,toggleComplete }) {
               onClick={() => removeTodo(index)}
               className="fas fa-trash-alt text-danger mx-2 delete-icon"
             ></i>
-            <span className="timestamp">{l.timestamp.toLocaleString()}</span>
+            <span className="timestamp">{formatDate(l.timestamp)}</span>
           </div>
         </div>
       ))}
